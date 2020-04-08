@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
 
 # Application definition
 
@@ -37,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'pruningClients',
 ]
 
@@ -76,7 +82,7 @@ WSGI_APPLICATION = 'pruningClients_django.wsgi.application'
 
 DATABASES = {
     'default': {
-                'ENGINE': 'django.db.backends.postgresql',
+            'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'pruningclients',
         'USER': 'pruninguser',
         'PASSWORD': 'pruning',
