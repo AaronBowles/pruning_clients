@@ -18,4 +18,4 @@ class Client(models.Model):
     notes = models.TextField()
 
     def __str__(self):
-        return self.lastname
+        return self.lastName
