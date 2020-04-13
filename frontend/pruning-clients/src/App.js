@@ -9,17 +9,17 @@ class App extends Component {
   constructor(state) {
     super(state)
     this.state = {
-      clients:""
+   
     }
   }
 
-  componentDidMount() {
-    Axios.get('https://pruning-client-backend.herokuapp.com/clients')
-    .then(res => {
-      console.log(res.data);
-      this.setState({clients: res.data});
-    });
-  }
+  // componentDidMount() {
+  //   Axios.get('https://pruning-client-backend.herokuapp.com/clients')
+  //   .then(res => {
+  //     console.log(res.data);
+  //     this.setState({clients: res.data});
+  //   });
+  // }
 
   render() {
     
@@ -31,7 +31,7 @@ class App extends Component {
             <Link to="/detail"> Detail </Link>
           </nav>
         </header>
-        <h1> Hello</h1>
+        <h1> Pruning Clients Organizer </h1>
         <main>
           <Switch>
             <Route exact path="/"
