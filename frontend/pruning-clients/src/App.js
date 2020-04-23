@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
-import Home from "./components/Home/Home";
+import ClientList from "./components/ClientList/ClientList";
 import Detail from "./components/Detail/Detail";
 import ClientAdd from "./components/ClientAdd/ClientAdd";
+import Home from "./components/Home/Home"
 import Axios from 'axios';
 
 
@@ -31,6 +32,7 @@ class App extends Component {
             <Link to="/"> Home </Link>
             <Link to="/detail"> Detail </Link>
             <Link to="/add"> add </Link>
+            <Link to= "/clientList">Client List</Link>
           </nav>
         </header>
         <h1> Pruning Clients Organizer </h1>
@@ -38,8 +40,8 @@ class App extends Component {
           <Switch>
             <Route exact path="/"
             render={props => (
-              <Home 
-              clients = {this.state.clients}
+              <Home
+              // clients = {this.state.clients}
               />
             )}
           />
@@ -53,6 +55,11 @@ class App extends Component {
           <Route exact path ="/add" 
           render={props => (
           <ClientAdd/>
+          )}
+          />
+          <Route exact path ="/clientList" 
+          render={props => (
+          <ClientList/>
           )}
           />
             
