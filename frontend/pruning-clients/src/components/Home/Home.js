@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Home.css";
-
+import { Link } from 'react-router-dom';
 
 class Home extends Component {
     constructor(props) {
@@ -14,6 +14,7 @@ class Home extends Component {
           return (
               <div>
                   <h1>Home </h1>
+                  <Link to="/clientList"> <button> View Client List </button></Link>
               </div>
           )
       }

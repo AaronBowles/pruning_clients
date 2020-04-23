@@ -89,6 +89,7 @@ componentDidMount() {
         return (
             <div>
                 <h1>Client List </h1>
+                <h2> Filter Clients</h2>
                 <div>
                     {clientList}
                     {/* <table>

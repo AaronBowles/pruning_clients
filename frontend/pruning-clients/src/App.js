@@ -48,7 +48,7 @@ class App extends Component {
                       <Route exact path="/detail"
             render={props => (
               <Detail 
-              clients = {this.state.clients}
+             // clients = {this.state.clients}
               />
             )}
           />
