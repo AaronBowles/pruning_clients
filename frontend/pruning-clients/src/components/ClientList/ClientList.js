@@ -63,7 +63,16 @@ componentDidMount() {
                             <td> {item.address}, {item.city}, {item.state}, {item.zip}</td> 
                             <td> {item.email}</td>
                             <td> {item.phone} </td>   
-                            <td> {item.serviceDate['2019']}, {item.pruningHours['2019']}, {item.haulHours['2019']} </td>
+                            <td> 
+                                <ul>
+                                  <li>
+                                    {item.serviceDate['2019']}, {item.pruningHours['2019']}, {item.haulHours['2019']} 
+                                  </li>
+                                  <li>
+                                  {item.serviceDate['2018']}, {item.pruningHours['2018']}, {item.haulHours['2018']} 
+                                  </li>
+                                </ul>
+                            </td>
                             <td> {item.primaryPlants} </td>
                             <td> {item.notes} </td>
 
