@@ -43,8 +43,15 @@ componentDidMount() {
                          <table>
                         <thead>
                             <tr>
+
                                 <th> First Name </th>
                                 <th> Last Name </th>
+                                <th> Address </th>
+                                <th> Email </th>
+                                <th> Phone </th>
+                                <th> Service </th>
+                                <th> Primary Plants </th>
+                                <th> Notes </th>
 
                             </tr>
                         </thead>
@@ -52,7 +59,14 @@ componentDidMount() {
                             <tr>
 
                             <td> {item.lastName}</td>
-                            <td> {item.firstName}</td>                    
+                            <td> {item.firstName}</td>   
+                            <td> {item.address}, {item.city}, {item.state}, {item.zip}</td> 
+                            <td> {item.email}</td>
+                            <td> {item.phone} </td>   
+                            <td> {item.serviceDate['2019']}, {item.pruningHours['2019']}, {item.haulHours['2019']} </td>
+                            <td> {item.primaryPlants} </td>
+                            <td> {item.notes} </td>
+
                             </tr>
                         </tbody>
 
