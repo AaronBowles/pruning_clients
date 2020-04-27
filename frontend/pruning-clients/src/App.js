@@ -4,14 +4,14 @@ import ClientList from "./components/ClientList/ClientList";
 import Detail from "./components/Detail/Detail";
 import ClientAdd from "./components/ClientAdd/ClientAdd";
 import Home from "./components/Home/Home"
-import Axios from 'axios';
+//import Axios from 'axios';
 
 
 class App extends Component {
   constructor(state) {
     super(state)
     this.state = {
-   
+     
     }
   }
 
@@ -54,7 +54,8 @@ class App extends Component {
           />
           <Route exact path ="/add" 
           render={props => (
-          <ClientAdd/>
+          <ClientAdd
+          />
           )}
           />
           <Route exact path ="/clientList" 

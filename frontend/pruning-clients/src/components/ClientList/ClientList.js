@@ -49,7 +49,7 @@ componentDidMount() {
                                 <th> Address </th>
                                 <th> Email </th>
                                 <th> Phone </th>
-                                <th> Service </th>
+                                <th> Service,Pruning Hours, Haul Hours </th>
                                 <th> Primary Plants </th>
                                 <th> Notes </th>
 
@@ -89,7 +89,7 @@ componentDidMount() {
         return (
             <div>
                 <h1>Client List </h1>
-                <h2> Filter Clients</h2>
+                <h2> Filter Clients </h2>
                 <div>
                     {clientList}
                     {/* <table>
