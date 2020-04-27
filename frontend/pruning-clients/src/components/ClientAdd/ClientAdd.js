@@ -24,7 +24,7 @@ class ClientAdd extends Component {
              "2018 haul": null,
             primaryPlants: "",
             notes: "",
-            serviceDate: {},
+            serviceDate: null,
             pruningHours: {},
             haulHours: {}
 
@@ -33,13 +33,18 @@ class ClientAdd extends Component {
 
     componentDidUpdate(prevProps,prevState){
 
-        if(this.state["2019 service"] !== null){
-            Axios.defaults.xsrfCookieName = 'csrftoken'
-            Axios.defaults.xsrfHeaderName = "X-CSRFTOKEN"
-            Axios.post("http://pruning-client-backend.herokuapp.com/clients", 
-            JSON.stringify(this.state), { headers: {
+        if(this.state.serviceDate !== null){
+
+            Axios.post("https://pruning-client-backend.herokuapp.com/clients", 
+            this.state, { headers: {
                 'Content-Type': 'application/json',
-            }}
+
+            },
+            auth: {
+                username: 'bowles',
+                password: 'bowles'
+            }
+        }
             )
             .then(function(response){
                 console.log(response)
@@ -75,6 +80,7 @@ class ClientAdd extends Component {
                                     "2018": this.state["2018 haul"]
                                     }
 })      
+        this.setState({zip: parseInt(this.state.zip)})
     delete this.state["2019 service"]
     delete this.state["2018 service"]
     delete this.state["2019 hours"]
